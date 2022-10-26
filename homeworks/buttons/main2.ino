@@ -1,30 +1,31 @@
-#define PLUS_BUTTON   2
-#define MINUS_BUTTON  4
+int switch_pin = 8;
+int led_pin = 11;
 
-int brightness = 100;
-boolean plusUp = true;
-boolean minusUp = true;
- 
+boolean last = LOW;
+boolean current = LOW;
+int lvl = 0;
+
 void setup() {
-   pinMode(10, OUTPUT);
-   pinMode(PLUS_BUTTON, INPUT_PULLUP);
-   pinMode(MINUS_BUTTON, INPUT_PULLUP);
-}
- 
-void loop() {
-   analogWrite(10, brightness);
-  
-   plusUp = handleClick(PLUS_BUTTON, plusUp, +10);
-   minusUp = handleClick(MINUS_BUTTON, minusUp, -40);
+	pinMode(switch_pin, INPUT);
+	pinMode(led_pin, OUTPUT);
 }
 
-boolean handleClick(int buttonPin, boolean wasUp, int delta) {
-   boolean isUp = digitalRead(buttonPin);
-   if (wasUp && !isUp) {
-      isUp = digitalRead(buttonPin);
-      // если был клик кнопки, меняем яркость в пределах от 0 до 255
-      if (!isUp)
-         brightness = constrain(brightness + delta, 0, 255);
-   }
-   return isUp;
+boolean debounse(boolean last) {
+	boolean current = digitalRead(switch_pin);
+	if(last != current) {
+		delay(5);
+		current = digitalRead(switch_pin);
+	}
+	return current;
+}
+
+void loop() {
+	current = debounse(last);
+	if(last == LOW && current == HIGH) {
+		lvl = lvl + 51;
+	}
+	last = current;
+
+	if(lvl > 255) lvl = 0;
+	analogWrite(led_pin, lvl);
 }
