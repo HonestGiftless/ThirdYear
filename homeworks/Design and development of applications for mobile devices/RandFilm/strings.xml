@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="films">
+        <item>Harry Potter</item>
+        <item>Harry Potter 2</item>
+        <item>Harry Potter 3</item>
+        <item>Harry Potter 4</item>
+    </string-array>
+    <string name="next">Show</string>
+    <string name="reset">reset</string>
+</resources>
