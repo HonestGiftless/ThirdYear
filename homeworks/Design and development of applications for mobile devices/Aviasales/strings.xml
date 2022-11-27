@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AviaSales</string>
+    <string-array name="city">
+        <item>Irkutsk</item>
+        <item>Moscow</item>
+        <item>Saint-Petersburg</item>
+        <item>Kazan</item>
+    </string-array>
+</resources>
