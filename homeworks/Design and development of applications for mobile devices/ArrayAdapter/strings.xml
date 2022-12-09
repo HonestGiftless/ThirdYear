@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">People_List</string>
+    <string-array name="name_list"></string-array>
+    <string-array name="secondname_list">
+        <item>Chumachenko</item>
+        <item>Pakhutova</item>
+        <item>Malanova</item>
+        <item>Ramazanova</item>
+        <item>Petrushin</item>
+    </string-array>
+</resources>
