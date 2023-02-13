@@ -9,7 +9,7 @@ void setup(){
     digitalWrite(outputs[i], LOW);
   }
   for( int i=0; i<2; i++){
-  	pinMode( inputs[i], INPUT );
+  	pinMode(inputs[i], INPUT);
   }
   for( int i=0; i<4; i++){
   	btnStates[i]=0;
