@@ -29,5 +29,5 @@ void loop(){
   	Serial.print(String(i)+": "+String(btnStates[i])+", ");
   }               
   Serial.println(" ");
-  delay( 100 );
+  delay(100);
 }
