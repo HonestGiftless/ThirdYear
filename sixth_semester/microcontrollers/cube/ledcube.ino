@@ -4,7 +4,6 @@
 #define led_pin4 4
 #define led_pin5 5
 #define led_pin6 6
-int var = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -14,223 +13,266 @@ void setup() {
   pinMode(led_pin4, OUTPUT);
   pinMode(led_pin5, OUTPUT);
   pinMode(led_pin6, OUTPUT);
-  Serial.println("Write the number of the led or leds)");
 }
 
 void loop() {
-  
-  if (Serial.available() > 1){
-      var = Serial.parseInt();
-      Serial.println(var);
-      switch (var) {
-        case 1:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 2:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 3:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 4:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 5:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 6:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 7:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 8:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 12:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 23:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 14:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 34:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 56:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-          case 67:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 78:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 58:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 15:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 26:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 37:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 48:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 123:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 567:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 1234:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, HIGH);
-          break;
-        case 5678:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, HIGH);
-          digitalWrite(led_pin6, LOW);
-          break;
-        case 12345678:
-          digitalWrite(led_pin1, HIGH);
-          digitalWrite(led_pin2, HIGH);
-          digitalWrite(led_pin3, HIGH);
-          digitalWrite(led_pin4, HIGH);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, LOW);
-          break;
-        default:
-          digitalWrite(led_pin1, LOW);
-          digitalWrite(led_pin2, LOW);
-          digitalWrite(led_pin3, LOW);
-          digitalWrite(led_pin4, LOW);
-          digitalWrite(led_pin5, LOW);
-          digitalWrite(led_pin6, LOW);
-          Serial.println("Impossible");
-    }
+  String led_num = Serial.readString();
+  choice(led_num);
+}
+
+void choice(String led) {
+  if (led == "1") {
+    digitalWrite(led_pin1, 1);
+    digitalWrite(led_pin2, 0);
+    digitalWrite(led_pin3, 0);
+    digitalWrite(led_pin4, 0);
+    digitalWrite(led_pin5, 0);
+    digitalWrite(led_pin6, 1);
+    delay(1500);
+  } else if (led == "2") {
+    digitalWrite(led_pin1, 0);
+    digitalWrite(led_pin2, 1);
+    digitalWrite(led_pin3, 0);
+    digitalWrite(led_pin4, 0);
+    digitalWrite(led_pin5, 0);
+    digitalWrite(led_pin6, 1);
+  } else if (led == "3") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "4") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "5") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "6") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "7") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "8") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "12") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "14") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "15") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "123") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "1234") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "12345678") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "23") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "26") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "34") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 1);
+  } else if (led == "56") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "58") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "67") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "78") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "37") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "48") {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "567") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "5678") {
+      digitalWrite(led_pin1, 1);
+      digitalWrite(led_pin2, 1);
+      digitalWrite(led_pin3, 1);
+      digitalWrite(led_pin4, 1);
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin6, 0);
+  } else if (led == "diagonal") {
+      int dtime= 100;
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin2, 1);
+      delay(dtime);
+
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin2, 0);
+      delay(dtime);
+
+      // 1
+      digitalWrite(led_pin6, 1);
+      digitalWrite(led_pin3, 1);
+      delay(dtime);
+
+      digitalWrite(led_pin6, 0);
+      digitalWrite(led_pin3, 0);
+      delay(dtime);
+
+      //2
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin4, 1);
+      delay(dtime);
+
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin4, 0);
+
+      //3
+      digitalWrite(led_pin6, 1);
+      digitalWrite(led_pin1, 1);
+      delay(dtime);
+
+      digitalWrite(led_pin6, 0);
+      digitalWrite(led_pin1, 0);
+      delay(dtime);
+      
+      // 0
+      digitalWrite(led_pin6, 1);
+      digitalWrite(led_pin2, 1);
+      delay(dtime);
+
+      digitalWrite(led_pin6, 1);
+      digitalWrite(led_pin2, 1);
+      delay(dtime);
+      // 1
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin3, 1);
+      delay(dtime);
+      
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin3, 0);
+      delay(dtime);
+
+      // 2
+      digitalWrite(led_pin6, 1);
+      digitalWrite(led_pin4, 1);
+      delay(dtime);
+      
+      digitalWrite(led_pin6, 0);
+      digitalWrite(led_pin4, 0);
+      delay(dtime);
+      
+      // 3
+      digitalWrite(led_pin5, 1);
+      digitalWrite(led_pin1, 1);
+      delay(dtime);
+      // 4
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin1, 0);
+  } else {
+      digitalWrite(led_pin1, 0);
+      digitalWrite(led_pin2, 0);
+      digitalWrite(led_pin3, 0);
+      digitalWrite(led_pin4, 0);
+      digitalWrite(led_pin5, 0);
+      digitalWrite(led_pin6, 0);
+      Serial.println('Unknown value');
   }
 }
