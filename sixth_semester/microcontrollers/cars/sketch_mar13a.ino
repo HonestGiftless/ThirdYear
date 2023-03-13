@@ -78,16 +78,16 @@ void change_condition() {
 void stop() {
   digitalWrite(lm_fb, 0);
   digitalWrite(rm_fb, 0);
-  digitalWrite(lm_s, 0);
-  digitalWrite(rm_s, 0);
+  analogWrite(lm_s, 0);
+  analogWrite(rm_s, 0);
 }
 
 void direct() {
   if (fd) {
     digitalWrite(lm_fb, 0);
     digitalWrite(rm_fb, 0);
-    digitalWrite(lm_s, 200);
-    digitalWrite(rm_s, 250);
+    analogWrite(lm_s, 200);
+    analogWrite(rm_s, 250);
     delay(150);
     stop();
     delay(150);
@@ -95,8 +95,8 @@ void direct() {
   if (lt) {
     digitalWrite(lm_fb, 1);
     digitalWrite(rm_fb, 0);
-    digitalWrite(lm_s, 200);
-    digitalWrite(rm_s, 250);
+    analogWrite(lm_s, 200);
+    analogWrite(rm_s, 250);
     delay(150);
     stop();
     delay(150);
@@ -104,8 +104,8 @@ void direct() {
   if (rt) {
     digitalWrite(lm_fb, 0);
     digitalWrite(rm_fb, 1);
-    digitalWrite(lm_s, 200);
-    digitalWrite(rm_s, 250);
+    analogWrite(lm_s, 200);
+    analogWrite(rm_s, 250);
     delay(150);
     stop();
     delay(150);
