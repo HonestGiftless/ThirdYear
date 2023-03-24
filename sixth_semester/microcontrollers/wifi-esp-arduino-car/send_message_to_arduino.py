@@ -5,7 +5,7 @@ class Go:
   def __init__(self):
     self.uart = UART(0, 115200)
     self.uart.init(115200, bits=8, parity=None, stop=1)
-    uos.dupterm(None, 1)
+    uos.dupterm(None, 1) # отключаем репл, чтобы можно было прочесть данные
 
   def forward(self):
     self.uart.write('f')
@@ -20,4 +20,4 @@ class Go:
     self.uart.write('s')
 
 go = Go()
-# go.forward() - пример команды для отправки
+go.forward()
