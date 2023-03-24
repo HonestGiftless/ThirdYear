@@ -20,4 +20,4 @@ class Go:
     self.uart.write('s')
 
 go = Go()
-go.forward()
+# go.forward() - example call func
