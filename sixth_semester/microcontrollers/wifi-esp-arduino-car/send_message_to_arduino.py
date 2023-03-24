@@ -1,6 +1,20 @@
 from machine import UART
 import uos
 
+# import network
+
+# wifi_ssid = "MicroPython-37bdff"
+# wifi_password = "micropythoN"
+
+# wifi = network.WLAN(network.STA_IF)
+# wifi.active(True)
+# wifi.connect(wifi_ssid, wifi_password)
+
+# while not wifi.isconnected():
+#     pass
+
+# print("Connected to Wi-Fi")
+
 class Go:
   def __init__(self):
     self.uart = UART(0, 115200)
