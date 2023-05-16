@@ -22,3 +22,5 @@ void setup() {
 
 void loop() {
 }
+
+// calibration factor: -1.07
