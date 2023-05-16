@@ -4,7 +4,7 @@ HX711 scale;
 #define DT  2
 #define SCK 3
 
-float weight_of_standard = 350;
+float weight_of_standard = 20;
 float units = 0.035274;
 float calibration_factor = 0;
 
