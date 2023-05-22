@@ -36,7 +36,7 @@ void takeObject() {
 
   delay(250);
 
-  if (cm < 140) {
+  if (cm < 140) { // 140 нужно заменить на значение, исходя из конструкции
     item = true;
   } else {
     item = false;
