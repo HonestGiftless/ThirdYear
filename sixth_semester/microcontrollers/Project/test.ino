@@ -29,7 +29,10 @@ void setup() {
 void loop() {
   takeObject();
   checkMetall(item);
-  takeBin(item, hasMetall);
+
+  if (item && separator) {
+    cap.write(0);
+  }
 }
 
 void takeObject() {
@@ -60,31 +63,12 @@ void checkMetall(bool itm) {
   if (itm) {
     if (sensorValue==LOW) {
       hasMetall = true;
+      separator.write(90);
     } else {
       hasMetall = false;
+      separator.write(0);
     }
   } else {
     hasMetall = false;
-  }
-}
-
-void takeBin(bool itm, bool mtl) {
-  if (itm) {
-    if (mtl) {
-      separator.write(0); // исходя из мотора
-      delay(500);
-      cap.write(0); // исходя из мотора
-      delay(500);
-    } else {
-      separator.write(90); // исходя из мотора
-      delay(500);
-      cap.write(0); // исходя из мотора
-      delay(500);
-    }
-  } else {
-      cap.write(90); // определить состояние, в котором будет мотор крышки
-      delay(500);
-      separator.write(45); // определить состояние, в котором будет мотор разделения мусора   
-      delay(500);
   }
 }
